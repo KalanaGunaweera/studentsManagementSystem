@@ -9,7 +9,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         boolean value =true;
-        SubjectMarks dataCollection = new SubjectMarks();
         Subjects subjects = new Subjects();
         Students students =new Students();
         SubjectMarks subjectMarks = new SubjectMarks();
