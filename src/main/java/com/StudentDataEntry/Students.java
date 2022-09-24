@@ -41,10 +41,13 @@ public class Students {
         studentlistmap.put(studentName,0);
         mapper.writeValue(studentlist_filepath.toFile(),studentlistmap);
     }
-    public void searchFile(String name){
+    public void searchFile(String name) throws IOException {
         File file = new File("D:/PROGRAMMING/java/Class/java programmimg theory/Cording/com.studentsDataEntryProgram/"+name+".txt");
         if (file.exists()){
             System.out.println("File is exist");
+            Path studentSeachfile = Path.of(file.getPath());
+            subjects.subjectlistmap=mapper.readValue(studentSeachfile.toFile(),Map.class);
+            System.out.println(subjects.subjectlistmap);
         }else {
             System.out.println("File is not exist");
         }
